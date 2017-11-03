@@ -9,7 +9,7 @@ import com.github.kittinunf.fuel.httpGet
  */
 class API {
 
-    val APIKEY = "8f7f58f0f10d84de71f2c16c1fd86531"
+    val APIKEY = "xxx"
     init {
         FuelManager.instance.basePath = "http://api.openweathermap.org"
     }
