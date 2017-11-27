@@ -85,10 +85,12 @@ class MainActivity : AppCompatActivity() {
     private val locationListener: LocationListener = object : LocationListener {
         override fun onLocationChanged(location: Location) {
             weather = WeatherLocation(location.latitude, location.longitude)
-            weather!!.callback = {
+            weather?.callback = {
                 updateUI()
             }
-            getWeatherAtLocation(weather!!)
+            if (weather != null) {
+                getWeatherAtLocation(weather!!)
+            }
 
         }
 
